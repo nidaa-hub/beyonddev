@@ -1,4 +1,4 @@
-# Monday.com Website Automation Test Suite
+# Monday.com Website Automation Test
 ##  Overview:
 This automation test suite is designed to thoroughly test the functionalities of the Monday.com website. The suite includes a set of automated tests covering critical aspects of the website, such as task management,   
 collaboration, and automation features.
