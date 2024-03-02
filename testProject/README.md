@@ -33,3 +33,18 @@ collaboration, and automation features.
 ### Integration Testing:
 - Verify the integration with external tools and services.
 - Test the flow of data between Monday.com and integrated applications.
+
+## Tools:
+### Selenium:
+- Employ Selenium for web automation, ensuring precise and efficient testing of web applications.
+  
+### Selenium Grid:
+- Leverage Selenium Grid for parallel test execution, enhancing the speed and efficiency of test suites.
+
+## Test Management:
+### TestRail:
+- Utilize TestRail for effective test case management and scenario documentation.
+  
+## Bug Tracking:
+### Jira:
+- Leverage Jira for efficient bug tracking and collaboration.
