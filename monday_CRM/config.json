@@ -1,0 +1,14 @@
+{
+  "hub": "http://172.20.10.4:4444",
+  "url": "https://nidaa-band.monday.com",
+  "grid": true,
+  "parallel": true,
+  "serial": false,
+  "browser": "chrome",
+  "platform": "windows",
+  "browser_types": [
+    "chrome",
+    "firefox",
+    "edge"
+  ]
+}
