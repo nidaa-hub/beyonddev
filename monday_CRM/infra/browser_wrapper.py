@@ -1,5 +1,4 @@
-import time
-from os.path import dirname, join
+
 from selenium import webdriver
 from infra.config_loader import ConfigLoader
 
@@ -25,7 +24,6 @@ class BrowserWrapper:
         url = self.config["url"]
         self.driver.get(url)
         self.driver.maximize_window()
-        # self.driver.fullscreen_window()
         return self.driver
 
     # def close_browser(self, driver):

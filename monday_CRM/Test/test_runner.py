@@ -24,6 +24,7 @@ test_cases = [NonParallelDealsPageTests, NonParallelHomePageTests, NonParallelLe
               ParallelDealsPageTests, ParallelLeadsPageTests, ParallelAccountsPageTests, ParallelContactsPageTests,
               ParallelActivitiesPageTests]
 demo_cases = [NonParallelAccountsPageTests]
+demo_cases_1 = [NonParallelHomePageTests]
 
 def run_tests_for_browser(browser: str, test_case: Type[unittest.TestCase]):
     test_case.browser = browser
@@ -51,10 +52,10 @@ if __name__ == "__main__":
     is_serial = not config['parallel']
     browsers = config["browser_types"]
     grid_url = config["hub"]
-    # if is_parallel:
-    #     run_tests_for_browser_parallel(browsers, parallel_cases)
-    #     run_tests_for_browser_serial(browsers, serial_cases)
-    # elif is_serial:
-    #     run_tests_for_browser_serial(browsers, test_cases)
-    run_tests_for_browser_serial(browsers, demo_cases)
+    if is_parallel:
+        run_tests_for_browser_parallel(browsers, parallel_cases)
+        run_tests_for_browser_serial(browsers, serial_cases)
+    elif is_serial:
+        run_tests_for_browser_serial(browsers, test_cases)
+   # run_tests_for_browser_serial(browsers, demo_cases)
 

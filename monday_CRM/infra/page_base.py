@@ -43,7 +43,6 @@ class BasePage():
         self._driver = driver
 
     def wait_for_element_and_click(self, locator):
-        """Wait for an element to be clickable and then click."""
         WebDriverWait(self._driver, 30).until(EC.presence_of_element_located(locator))
         element = WebDriverWait(self._driver, 30).until(EC.element_to_be_clickable(locator))
         element.click()
@@ -53,7 +52,6 @@ class BasePage():
         return WebDriverWait(self._driver, 30).until(EC.presence_of_element_located(locator))
 
     def type_text(self, locator, text):
-        """Type text into a field located by a specific locator."""
         field = self.wait_presence_of_element_located(locator)
         field.clear()
         field.send_keys(text)
@@ -68,7 +66,6 @@ class BasePage():
         WebDriverWait(self._driver, 30).until(lambda driver: url in driver.current_url)
 
     def wait_for_click_able_element(self, locator):
-        """Wait for an element to be clickable and then click."""
         self.wait_presence_of_element_located(locator)
         element = WebDriverWait(self._driver, 30).until(EC.element_to_be_clickable(locator))
         return element
@@ -279,9 +276,6 @@ class BasePage():
         return True
 
     def get_xpath(self, element):
-        """
-        Generates an XPath selector for the given Selenium element.
-        """
         components = []
         child = element
         while child is not None:

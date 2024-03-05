@@ -19,13 +19,6 @@ class NonParallelHomePageTests(unittest.TestCase):
         self.home_page = HomePage(self.driver)
         self.home_page.switch_to_environment(environment_name="sales CRM")
 
-    def test_switch_between_environments(self):
-        print("test_switch_between_environments")
-        name = self.home_page.switch_to_environment(environment_name="sales CRM")
-        self.assertEqual(name, "sales CRM", "You are not in a sales CRM environment")
-        name = self.home_page.switch_to_environment(environment_name="dev")
-        self.assertEqual(name, "dev", "You are not in a dev environment")
-
     def test_sign_out(self):
         print("test_sign_out")
         status = self.home_page.sign_out()

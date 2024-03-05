@@ -9,8 +9,7 @@ class ConfigLoader:
         output = join(here, filename)
         return output
 
-    def load_config(self, file_path="../config.json"):  # Update this line
-        """Loads configuration settings from a JSON file."""
+    def load_config(self, file_path="../config.json"):  #
         filename = self.get_filename(file_path)
         with open(filename, 'r') as file:
             config = json.load(file)
